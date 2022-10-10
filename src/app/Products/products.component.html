@@ -1,0 +1,34 @@
+<p class="head1">Please select the products</p>
+<p class="head2">
+  <em>Instruction</em>: Please hold down Ctrl(For Windows) or Cmd(For Mac) in
+  order to select multiple products at one go.
+</p>
+<form #productForm="ngForm" (ngSubmit)="onProductSubmit(productForm)">
+  <div class="list">
+    <select
+      type="text"
+      #name="ngModel"
+      size="10"
+      name="selectedItem"
+      [(ngModel)]="selectedItem"
+      multiple
+    >
+      <option value="Apples - $0.8">Apples - $0.8</option>
+      <option value="Bananas - $1/Dozen">Bananas - $1/Dozen</option>
+      <option value="Mango - $1.2">Mango - $1.2</option>
+      <option value="Peach - $0.8">Peach - $0.8</option>
+      <option value="Watermelon - $1.5">Watermelon - $1.5</option>
+      <option value="Kiwi - $0.8">Kiwi - $0.8</option>
+      <option value="Oranges - $0.9">Oranges - $0.9</option>
+      <option value="Grapes - $2.0">Grapes - $2.0</option>
+      <option value="Pineapple - $2.5">Pineapple - $2.5</option>
+      <option value="Lemon - $0.4">Lemon - $0.4</option>
+      <option value="Dragon Fruit - $2.0">Dragon Fruit - $2.0</option>
+      <option value="Starfruit - $2.5">Starfruit - $2.5</option>
+      <option value="Coconut - $1.0">Coconut - $1.0</option>
+    </select>
+  </div>
+  <button class="bt2" routerLink="/user" type="next">Previous</button>
+  <button class="bt" type="submit">Submit</button>
+  <button class="bt1" routerLink="/summary" type="next">Next</button>
+</form>
